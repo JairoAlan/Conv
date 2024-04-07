@@ -6,6 +6,7 @@ from ReLU import ReLU
 from Pool import Pool
 from Softmax import Softmax
 from TestMnistConv import W1,W5,Wo
+import os
 
 
 app = Flask(__name__)
@@ -43,4 +44,5 @@ def predict():
     return jsonify({'Numero Predicho': int(predicted_number)})
 
 if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
