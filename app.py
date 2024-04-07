@@ -5,9 +5,10 @@ from Conv import Conv
 from ReLU import ReLU
 from Pool import Pool
 from Softmax import Softmax
-from TestMnistConv import W1,W5,Wo
 import os
 
+# Cargar los pesos de la red neuronal convolucional una sola vez al iniciar la aplicación
+from TestMnistConv import W1, W5, Wo
 
 app = Flask(__name__)
 
